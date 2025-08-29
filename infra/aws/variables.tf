@@ -21,3 +21,14 @@ variable "public_subnet_cidr" {
   type        = string
   default     = "10.0.1.0/24"
 }
+variable "db_username" {
+  type        = string
+  default     = "adminuser"
+  description = "DB master username"
+}
+
+variable "db_password" {
+  type        = string
+  description = "DB master password"
+  sensitive   = true
+}
